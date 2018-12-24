@@ -1,0 +1,6 @@
+---
+# run locally here
+- hosts: local
+  connection: local
+  roles:
+    - theme
