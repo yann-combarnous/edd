@@ -1,0 +1,21 @@
+---
+- name: Add Flat Remix icons Repository
+  apt_repository:
+    repo: ppa:daniruiz/flat-remix
+    state: present
+- name: Install Flat Remix 
+  apt:
+    pkg: flat-remix
+    state: installed
+    update_cache: true
+- name: Unarchive theme Adapta-Nokto
+  unarchive:
+    src: https://cinnamon-spices.linuxmint.com/files/themes/Adapta-Nokto.zip
+    dest: ~/.themes
+    remote_src: yes
+- name: Configure Cinnamon
+  dconf:
+    key: "{{ item.value.path }}"
+    value: {{ item.value.name }}
+    state: present
+  loop: "{{ lookup('dict', settings) }}"
