@@ -4,19 +4,21 @@
     repo: ppa:daniruiz/flat-remix
     state: present
     codename: bionic
+  become: yes
 - name: Install Flat Remix 
   apt:
     pkg: flat-remix
     state: present
     update_cache: true
+  become: yes
 - name: Creates theme directory
   file:
-    path: ~/.themes
+    path: /home/edd/.themes
     state: directory
 - name: Unarchive theme Adapta-Nokto
   unarchive:
     src: https://cinnamon-spices.linuxmint.com/files/themes/Adapta-Nokto.zip
-    dest: ~/.themes
+    dest: /home/edd/.themes
     remote_src: yes
 - name: Configure Cinnamon
   dconf:
