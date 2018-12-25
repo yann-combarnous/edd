@@ -3,6 +3,7 @@
   apt_repository:
     repo: ppa:daniruiz/flat-remix
     state: present
+    codename: Bionic
 - name: Install Flat Remix 
   apt:
     pkg: flat-remix
