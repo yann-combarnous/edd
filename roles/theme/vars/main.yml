@@ -18,4 +18,4 @@ settings:
         name: "'DMZ-Black'"
     privacy:
         path: /org/cinnamon/desktop/privacy/remember-recent-files
-        name: false
+        name: "false"
