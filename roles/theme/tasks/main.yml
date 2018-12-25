@@ -7,7 +7,7 @@
 - name: Install Flat Remix 
   apt:
     pkg: flat-remix
-    state: installed
+    state: present
     update_cache: true
 - name: Unarchive theme Adapta-Nokto
   unarchive:
