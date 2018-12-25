@@ -1,0 +1,8 @@
+---
+# tasks file for desktop
+- name: Configure Desktop
+  dconf:
+    key: "{{ item.value.path }}"
+    value: "{{ item.value.name }}"
+    state: present
+  loop: "{{ lookup('dict', settings) }}"
