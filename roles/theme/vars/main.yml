@@ -16,6 +16,3 @@ settings:
     cursorTheme:
         path: /org/cinnamon/desktop/interface/cursor-theme
         name: "'DMZ-Black'"
-    privacy:
-        path: /org/cinnamon/desktop/privacy/remember-recent-files
-        name: "false"
