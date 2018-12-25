@@ -1,1 +1,1 @@
-apt-get install -y ansible
+apt-get install -y ansible git

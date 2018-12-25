@@ -9,6 +9,10 @@
     pkg: flat-remix
     state: present
     update_cache: true
+- name: Creates theme directory
+  file:
+    path: ~/.themes
+    state: directory
 - name: Unarchive theme Adapta-Nokto
   unarchive:
     src: https://cinnamon-spices.linuxmint.com/files/themes/Adapta-Nokto.zip
