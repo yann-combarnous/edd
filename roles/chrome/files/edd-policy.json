@@ -1,6 +1,7 @@
 {
     "IncognitoModeAvailability": 2,
     "DefaultPluginsSetting": 1,
+    "PluginsAllowedForUrls": ["https://*", "http://*"],
     "ManagedBookmarks": [
         {"toplevel_name": "Sites EDD"}, 
         {"url": "google.com", "name": "Google"}, 

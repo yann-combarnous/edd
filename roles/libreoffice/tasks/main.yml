@@ -1,0 +1,13 @@
+---
+- name: Add LibreOffice Repository
+  apt_repository:
+    repo: ppa:libreoffice/ppa
+    state: present
+    codename: bionic
+  become: yes
+- name: Install latest LibreOffice
+  apt:
+    pkg: libreoffice
+    state: present
+    update_cache: true
+  become: yes
