@@ -16,6 +16,6 @@
 - name: Configure Cinnamon
   dconf:
     key: "{{ item.value.path }}"
-    value: {{ item.value.name }}
+    value: "{{ item.value.name }}"
     state: present
   loop: "{{ lookup('dict', settings) }}"
