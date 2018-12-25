@@ -3,7 +3,7 @@
 settings:
     backgroundImage:
         path: /org/cinnamon/desktop/background/picture-uri
-        name: "'file:///usr/share/backgrounds/linuxmint-qiana/j_baer_5976503592.jpg'"
+        name: "'https://github.com/adapta-project/adapta-github-resources/raw/master/images/suna-thumbnail.jpg'"
     backgroundShading:
         path: /org/cinnamon/desktop/background/color-shading-type
         name: "'solid'"
