@@ -21,6 +21,7 @@
   file:
     path: "{{ item }}"
     state: directory
+  become: yes
   with_items:
     - /etc/opt/
     - /etc/opt/chrome/
