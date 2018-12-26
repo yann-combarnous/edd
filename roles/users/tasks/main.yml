@@ -4,7 +4,7 @@
     path: /home/edd
     owner: edd
     group: edd
-    mode: 700
+    mode: '700'
     recurse: yes
 - name: Add the invite user
   user:
