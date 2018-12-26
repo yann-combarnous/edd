@@ -10,4 +10,4 @@
   user:
     name: invite
     state: present
-    password: {{ invitePwd }}
+    password: "{{ invitePwd }}"
