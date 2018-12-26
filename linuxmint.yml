@@ -1,6 +1,6 @@
 ---
 # run locally here
-- hosts: all
+- hosts: localhost
   connection: local
   roles:
     - users
