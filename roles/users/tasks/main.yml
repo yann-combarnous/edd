@@ -1,0 +1,13 @@
+---
+# tasks file for users
+- file:
+    path: /home/edd
+    owner: edd
+    group: edd
+    mode: 700
+    recurse: yes
+- name: Add the invite user
+  user:
+    name: invite
+    state: present
+    password: {{ invitePwd }}
