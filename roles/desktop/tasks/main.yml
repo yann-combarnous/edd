@@ -6,3 +6,15 @@
     value: "{{ item.value.name }}"
     state: present
   loop: "{{ lookup('dict', settings) }}"
+- name: Set app shortcuts
+  copy:
+    src: 14.json
+    dest: /home/edd/.cinnamon/configs/grouped-window-list@cinnamon.org/
+    owner: edd
+    group: edd
+- name: Set menu properties
+  copy:
+    src: 12.json
+    dest: /home/edd/.cinnamon/configs/menu@cinnamon.org/
+    owner: edd
+    group: edd

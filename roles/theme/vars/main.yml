@@ -3,13 +3,13 @@
 settings:
     themeName:
         path: /org/cinnamon/theme/name 
-        name: "'Adapta-Nokto'"
+        name: "'Adapta'"
     gtkTheme:
         path: /org/cinnamon/desktop/interface/gtk-theme
-        name: "'Adapta-Nokto'"
+        name: "'Adapta'"
     windowTheme:
         path: /org/cinnamon/desktop/wm/preferences/theme 
-        name: "'Adapta-Nokto'"
+        name: "'Adapta'"
     iconTheme: 
         path: /org/cinnamon/desktop/interface/icon-theme
         name: "'Flat-Remix'"

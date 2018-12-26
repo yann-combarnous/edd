@@ -8,6 +8,6 @@
 - name: Install latest LibreOffice
   apt:
     pkg: libreoffice
-    state: present
+    state: latest
     update_cache: true
   become: yes

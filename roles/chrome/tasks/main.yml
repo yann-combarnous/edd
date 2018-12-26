@@ -14,7 +14,7 @@
 - name: Install Google chrome
   apt:
     pkg: google-chrome-stable
-    state: present
+    state: latest
     update_cache: true
   become: yes
 - name: Creates policy directory
