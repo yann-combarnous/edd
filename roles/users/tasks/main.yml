@@ -6,8 +6,11 @@
     group: edd
     mode: '700'
     recurse: yes
+  become: yes
+  become_user: edd
 - name: Add the invite user
   user:
     name: invite
     state: present
     password: "{{ invitePwd }}"
+  become: yes
