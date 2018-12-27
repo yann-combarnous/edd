@@ -11,3 +11,9 @@
     state: latest
     update_cache: true
   become: yes
+- name: Install latest LibreOffice elementary style
+  apt:
+    pkg: libreoffice-style-elementary
+    state: latest
+    update_cache: true
+  become: yes

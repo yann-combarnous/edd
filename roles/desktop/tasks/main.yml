@@ -1,13 +1,5 @@
 ---
 # tasks file for desktop
-- name: Configure Desktop
-  dconf:
-    key: "{{ item.value.path }}"
-    value: "{{ item.value.name }}"
-    state: present
-  loop: "{{ lookup('dict', settings) }}"
-  become: yes
-  become_user: edd
 - name: Set app shortcuts
   copy:
     src: 14.json
@@ -22,5 +14,30 @@
     dest: /home/edd/.cinnamon/configs/menu@cinnamon.org/
     owner: edd
     group: edd
+  become: yes
+  become_user: edd
+- name: Creates theme directory
+  file:
+    path: /home/edd/.themes
+    state: directory
+    owner: edd
+    group: edd
+  become: yes
+  become_user: edd
+- name: Unarchive theme Adapta-Nokto
+  unarchive:
+    src: https://cinnamon-spices.linuxmint.com/files/themes/Adapta.zip
+    dest: /home/edd/.themes
+    remote_src: yes
+    owner: edd
+    group: edd
+  become: yes
+  become_user: edd
+- name: Configure Desktop
+  dconf:
+    key: "{{ item.value.path }}"
+    value: "{{ item.value.name }}"
+    state: present
+  loop: "{{ lookup('dict', settings) }}"
   become: yes
   become_user: edd

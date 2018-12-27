@@ -16,9 +16,24 @@ settings:
     panelsHeight:
         path: /org/cinnamon/panels-height
         name: "['1:60', '2:24']"
-    iconSiwe:
+    iconSize:
         path: /org/cinnamon/panel-zone-icon-sizes
         name: "'[{\"panelId\": 1, \"left\": 0, \"center\": 0, \"right\": 48},{\"panelId\": 2, \"left\": 0, \"center\": 0, \"right\": 0}]'"
     enabledApplets:
         path: /org/cinnamon/enabled-applets
         name: "['panel1:right:0:menu@cinnamon.org:12', 'panel1:left:2:grouped-window-list@cinnamon.org:14', 'panel2:right:4:systray@cinnamon.org:15', 'panel2:right:5:keyboard@cinnamon.org:16', 'panel2:right:8:notifications@cinnamon.org:28', 'panel2:right:7:sound@cinnamon.org:29', 'panel2:right:6:removable-drives@cinnamon.org:30', 'panel2:right:3:network@cinnamon.org:31', 'panel2:right:2:blueberry@cinnamon.org:32', 'panel2:right:1:power@cinnamon.org:33', 'panel2:center:0:calendar@cinnamon.org:34', 'panel2:right:9:user@cinnamon.org:35']"
+    themeName:
+        path: /org/cinnamon/theme/name 
+        name: "'Adapta'"
+    gtkTheme:
+        path: /org/cinnamon/desktop/interface/gtk-theme
+        name: "'Adapta'"
+    windowTheme:
+        path: /org/cinnamon/desktop/wm/preferences/theme 
+        name: "'Adapta'"
+    iconTheme: 
+        path: /org/cinnamon/desktop/interface/icon-theme
+        name: "'Flat-Remix'"
+    cursorTheme:
+        path: /org/cinnamon/desktop/interface/cursor-theme
+        name: "'DMZ-Black'"

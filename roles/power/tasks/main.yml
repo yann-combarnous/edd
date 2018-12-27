@@ -1,0 +1,10 @@
+---
+# tasks file for power
+- name: Configure power settings
+  dconf:
+    key: "{{ item.value.path }}"
+    value: "{{ item.value.name }}"
+    state: present
+  loop: "{{ lookup('dict', settings) }}"
+  become: yes
+  become_user: edd

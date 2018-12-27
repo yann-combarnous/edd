@@ -1,18 +1,2 @@
 ---
 # vars file for theme
-settings:
-    themeName:
-        path: /org/cinnamon/theme/name 
-        name: "'Adapta'"
-    gtkTheme:
-        path: /org/cinnamon/desktop/interface/gtk-theme
-        name: "'Adapta'"
-    windowTheme:
-        path: /org/cinnamon/desktop/wm/preferences/theme 
-        name: "'Adapta'"
-    iconTheme: 
-        path: /org/cinnamon/desktop/interface/icon-theme
-        name: "'Flat-Remix'"
-    cursorTheme:
-        path: /org/cinnamon/desktop/interface/cursor-theme
-        name: "'DMZ-Black'"

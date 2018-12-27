@@ -11,26 +11,3 @@
     state: latest
     update_cache: true
   become: yes
-- name: Creates theme directory
-  file:
-    path: /home/edd/.themes
-    state: directory
-    owner: edd
-    group: edd
-  become: yes
-  become_user: edd
-- name: Unarchive theme Adapta-Nokto
-  unarchive:
-    src: https://cinnamon-spices.linuxmint.com/files/themes/Adapta.zip
-    dest: /home/edd/.themes
-    remote_src: yes
-  become: yes
-  become_user: edd
-- name: Configure Cinnamon
-  dconf:
-    key: "{{ item.value.path }}"
-    value: "{{ item.value.name }}"
-    state: present
-  loop: "{{ lookup('dict', settings) }}"
-  become: yes
-  become_user: edd

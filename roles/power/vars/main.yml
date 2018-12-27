@@ -1,0 +1,27 @@
+---
+# vars file for power
+settings:
+    powerButton:
+        path: /org/cinnamon/settings-daemon/plugins/power/button-power 
+        name: "'interactive'"
+    inactiveAC:
+        path: /org/cinnamon/settings-daemon/plugins/power/sleep-inactive-ac-timeout
+        name: 1800
+    batteryCritical:
+        path: /org/cinnamon/settings-daemon/plugins/power/critical-battery-action 
+        name: "'hibernate'"
+    idleDim: 
+        path: /org/cinnamon/settings-daemon/plugins/power/idle-dim-time
+        name: 90
+    inactiveBattery:
+        path: /org/cinnamon/settings-daemon/plugins/power/sleep-inactive-battery-timeout
+        name: 600
+    idleBrightness
+        path: /org/cinnamon/settings-daemon/plugins/power/idle-brightness
+        name: 30
+    displayAC
+        path: /org/cinnamon/settings-daemon/plugins/power/sleep-display-ac
+        name: 600
+    displayBattery
+        path: /org/cinnamon/settings-daemon/plugins/power/sleep-display-battery
+        name: 300
