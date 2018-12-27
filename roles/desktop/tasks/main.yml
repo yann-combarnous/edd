@@ -3,41 +3,23 @@
 - name: Set app shortcuts
   copy:
     src: 14.json
-    dest: /home/edd/.cinnamon/configs/grouped-window-list@cinnamon.org/
-    owner: edd
-    group: edd
-  become: yes
-  become_user: edd
+    dest: ~/.cinnamon/configs/grouped-window-list@cinnamon.org/
 - name: Set menu properties
   copy:
     src: 12.json
-    dest: /home/edd/.cinnamon/configs/menu@cinnamon.org/
-    owner: edd
-    group: edd
-  become: yes
-  become_user: edd
+    dest: ~/.cinnamon/configs/menu@cinnamon.org/
 - name: Creates theme directory
   file:
-    path: /home/edd/.themes
+    path: ~/.themes
     state: directory
-    owner: edd
-    group: edd
-  become: yes
-  become_user: edd
 - name: Unarchive theme Adapta-Nokto
   unarchive:
     src: https://cinnamon-spices.linuxmint.com/files/themes/Adapta.zip
-    dest: /home/edd/.themes
+    dest: ~/.themes
     remote_src: yes
-    owner: edd
-    group: edd
-  become: yes
-  become_user: edd
 - name: Configure Desktop
   dconf:
     key: "{{ item.value.path }}"
     value: "{{ item.value.name }}"
     state: present
   loop: "{{ lookup('dict', settings) }}"
-  become: yes
-  become_user: edd
