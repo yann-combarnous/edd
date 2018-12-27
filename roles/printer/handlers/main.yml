@@ -1,0 +1,5 @@
+---
+# handlers file for printer
+- name: restart cups
+  service: name=cups state=restarted
+  become: yes

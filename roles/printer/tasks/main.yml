@@ -1,0 +1,30 @@
+---
+# tasks file for printer
+---
+- name: "cups - installation"
+  apt: name=cups state=installed update_cache=yes cache_valid_time=3600
+  become: yes
+
+- name: "cups - md5 on local printers.conf"
+  local_action: stat path={{ playbook_dir }}/roles/homie/files/printers.conf get_md5=yes
+  register: locst
+
+- name: "cups - md5 on remote printers.conf"
+  stat: path=/etc/cups/printers.conf get_md5=yes
+  register: remst
+  become: yes
+
+- name: "cups - stop service"
+  service: name=cups state=stopped
+  when: not remst.stat.exists or (locst.stat.md5 != remst.stat.md5)
+  become: yes
+
+- name: "cups - configure drivers"
+  copy: src=Canon_MG2900_series.ppd dest=/etc/cups/ppd/Canon_MG2900_series.ppd mode=640 owner=root group=lp backup=yes 
+  become: yes
+
+- name: "cups - configure printers"
+  copy: src=printers.conf dest=/etc/cups/printers.conf mode=600 owner=root group=lp backup=yes
+  notify: restart cups
+  when: not remst.stat.exists or (locst.stat.md5 != remst.stat.md5)
+  become: yes
