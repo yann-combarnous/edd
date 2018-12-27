@@ -16,12 +16,12 @@ settings:
     inactiveBattery:
         path: /org/cinnamon/settings-daemon/plugins/power/sleep-inactive-battery-timeout
         name: 600
-    idleBrightness
+    idleBrightness:
         path: /org/cinnamon/settings-daemon/plugins/power/idle-brightness
         name: 30
-    displayAC
+    displayAC:
         path: /org/cinnamon/settings-daemon/plugins/power/sleep-display-ac
         name: 600
-    displayBattery
+    displayBattery:
         path: /org/cinnamon/settings-daemon/plugins/power/sleep-display-battery
         name: 300
