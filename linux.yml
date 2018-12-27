@@ -1,7 +1,6 @@
 ---
 # run locally here
 - hosts: localhost
-  connection: local
   roles:
     - users
     - chrome
