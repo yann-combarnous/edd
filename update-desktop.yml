@@ -1,0 +1,7 @@
+---
+# run locally here
+- hosts: localhost
+  connection: local
+  roles:
+    - power
+    - desktop
