@@ -1,6 +1,7 @@
 ---
 # tasks file for users
-- file:
+- name: Protect admin user folder
+  file:
     path: /home/edd
     owner: edd
     group: edd
@@ -14,10 +15,10 @@
     state: present
     password: "{{ invitePwd }}"
   become: yes
-- name: Set autologin user
-  copy:
-    src: lightdm.conf
-    dest: /etc/lightdm/
-    owner: root
-    group: root
-  become: yes
+#- name: Set autologin user
+#  copy:
+#    src: lightdm.conf
+#    dest: /etc/lightdm/
+#    owner: root
+#    group: root
+#  become: yes

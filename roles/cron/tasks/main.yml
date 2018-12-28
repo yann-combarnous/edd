@@ -1,2 +1,42 @@
 ---
 # tasks file for cron
+- name: Create system bash executable
+  template: 
+    src: ansible-system.sh.j2
+    dest: /etc/ansible/ansible-system.sh
+    owner: root
+    group: root
+    mode: 0755
+  become: yes
+- name: Create user bash executable
+  template: 
+    src: ansible-user.sh.j2
+    dest: /etc/ansible/ansible-user.sh
+    owner: root
+    group: root
+    mode: 0755
+  become: yes
+- name: Create local directory to work from
+  file: 
+    path: '{{ workdir }}' 
+    state: directory 
+    owner: root 
+    group: root 
+    mode: 0751
+  become: yes
+- name: Create crontab entry to clone/pull git repository
+  template: 
+    src: etc_cron.d_ansible-pull.j2
+    dest: /etc/cron.d/ansible-pull
+    owner: root
+    group: root
+    mode: 0644
+  become: yes
+- name: Create logrotate entry for ansible-pull.log
+  template: 
+    src: etc_logrotate.d_ansible-pull.j2
+    dest: /etc/logrotate.d/ansible-pull
+    owner: root
+    group: root
+    mode: 0644
+  become: yes
