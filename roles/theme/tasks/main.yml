@@ -1,8 +1,9 @@
 ---
-- name: Add Paper icons icons Repository
+- name: Add Paper icons Repository
   apt_repository:
     repo: ppa:snwh/ppa
     state: present
+    codename: bionic
   become: yes
 - name: Install Paper icons
   apt:
