@@ -1,13 +1,12 @@
 ---
-- name: Add Flat Remix icons Repository
+- name: Add Paper icons icons Repository
   apt_repository:
-    repo: ppa:daniruiz/flat-remix
+    repo: ppa:snwh/ppa
     state: present
-    codename: bionic
   become: yes
-- name: Install Flat Remix 
+- name: Install Paper icons
   apt:
-    pkg: flat-remix
+    pkg: paper-icon-theme
     state: latest
     update_cache: true
   become: yes

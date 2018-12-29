@@ -1,22 +1,40 @@
 ---
 # tasks file for desktop
+- name: Find app shortcuts settings file
+  find:
+    path: ~/.cinnamon/configs/grouped-window-list@cinnamon.org/
+    patterns: ".*json$"
+    use_regex: True
+  register: file_grouped
 - name: Set app shortcuts
   copy:
-    src: 14.json
-    dest: ~/.cinnamon/configs/grouped-window-list@cinnamon.org/
+    src: grouped-window-list.json
+    dest: "{{ item.path }}"
+  with_items: " {{ file_grouped.files }}"
+- name: Find menu settings file
+  find:
+    path: ~/.cinnamon/configs/menu@cinnamon.org/
+    patterns: ".*json$"
+    use_regex: True
+  register: file_menu
 - name: Set menu properties
   copy:
-    src: 12.json
-    dest: ~/.cinnamon/configs/menu@cinnamon.org/
+    src: menu.json
+    dest: "{{ item.path }}"
+  with_items: " {{ file_menu.files }}"
+- name: Set qt theme
+  copy:
+    src: qt5ct.json
+    dest: ~/.config/qt5ct/
 - name: Creates theme directory
   file:
     path: ~/.themes
     state: directory
-- name: Unarchive theme Adapta-Nokto
-  unarchive:
-    src: https://cinnamon-spices.linuxmint.com/files/themes/Adapta.zip
-    dest: ~/.themes
-    remote_src: yes
+#- name: Unarchive theme Adapta-Nokto
+#  unarchive:
+#    src: https://cinnamon-spices.linuxmint.com/files/themes/Adapta.zip
+#    dest: ~/.themes
+#    remote_src: yes
 - name: Configure Desktop
   dconf:
     key: "{{ item.value.path }}"

@@ -168,11 +168,8 @@
             "nemo.desktop"
         ],
         "value": [
-            "nemo.desktop",
             "google-chrome.desktop",
-            "libreoffice-writer.desktop",
-            "libreoffice-calc.desktop",
-            "libreoffice-impress.desktop"
+            "nemo.desktop"
         ]
     },
     "group-apps": {
