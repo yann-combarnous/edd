@@ -26,6 +26,10 @@
   copy:
     src: qt5ct.json
     dest: ~/.config/qt5ct/
+- name: Hide welcome screen
+  copy:
+    src: mintwelcome.desktop
+    dest: ~/.config/autostart/
 - name: Creates theme directory
   file:
     path: ~/.themes
