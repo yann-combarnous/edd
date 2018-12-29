@@ -24,7 +24,7 @@
   with_items: " {{ file_menu.files }}"
 - name: Set qt theme
   copy:
-    src: qt5ct.json
+    src: qt5ct.conf
     dest: ~/.config/qt5ct/
 - name: Hide welcome screen
   copy:
