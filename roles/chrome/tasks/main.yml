@@ -31,8 +31,9 @@
   copy:
     src: edd-policy.json
     dest: /etc/opt/chrome/policies/managed/
-    owner: root
-    group: root
+    owner: invite
+    group: invite
+    mode: 0500
   become: yes
 - name: Uninstall Firefox
   apt:
