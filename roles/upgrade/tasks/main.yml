@@ -1,8 +1,5 @@
 ---
 # tasks file for upgrade
-- name: Update and upgrade apt packages
-  apt:
-    upgrade: yes
-    update_cache: yes
-    cache_valid_time: 86400
+- name: Linuxmint has its specific upgrade utility, only apply security updates
+  shell: mintupdate-cli upgrade -y -r -s
   become: yes
