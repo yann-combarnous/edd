@@ -30,6 +30,10 @@
   copy:
     src: mintwelcome.desktop
     dest: ~/.config/autostart/
+- name: Set ansible startup script
+  copy:
+    src: ansible.desktop
+    dest: ~/.config/autostart/
 - name: Creates theme directory
   file:
     path: ~/.themes

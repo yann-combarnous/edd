@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=ansibleuser
+Comment=Ansible user settings script
+Exec=/etc/ansible/ansible-user.sh
+NoDisplay=true
+Hidden=false
+Type=Application
+X-GNOME-Autostart-Delay=10
+X-GNOME-Autostart-enabled=true
