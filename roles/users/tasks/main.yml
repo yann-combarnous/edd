@@ -15,10 +15,10 @@
     state: present
     password: "{{ invitePwd }}"
   become: yes
-#- name: Set autologin user
-#  copy:
-#    src: lightdm.conf
-#    dest: /etc/lightdm/
-#    owner: root
-#    group: root
-#  become: yes
+- name: Set user session startup script
+  copy:
+    src: lightdm.conf
+    dest: /etc/lightdm/
+    owner: root
+    group: root
+  become: yes
