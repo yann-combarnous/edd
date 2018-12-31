@@ -6,7 +6,7 @@
     owner: root
     group: root
   become: yes
-- name: Add an Apt signing key, uses whichever key is at the URL
+- name: Add Chrome Apt signing key from URL
   apt_key:
     url: https://dl.google.com/linux/linux_signing_key.pub
     state: present
@@ -17,7 +17,7 @@
     state: latest
     update_cache: true
   become: yes
-- name: Creates policy directory
+- name: Creates Chrome policy directory
   file:
     path: "{{ item }}"
     state: directory
@@ -27,7 +27,7 @@
     - /etc/opt/chrome/
     - /etc/opt/chrome/policies/
     - /etc/opt/chrome/policies/managed/
-- name: Set Chrome invite policies
+- name: Set Chrome invite user policies
   copy:
     src: invite-policy.json
     dest: /etc/opt/chrome/policies/managed/
@@ -35,7 +35,7 @@
     group: invite
     mode: 0400
   become: yes
-- name: Set Chrome edd policies
+- name: Set Chrome edd user policies
   copy:
     src: edd-policy.json
     dest: /etc/opt/chrome/policies/managed/
@@ -43,7 +43,7 @@
     group: edd
     mode: 0400
   become: yes
-- name: Uninstall Firefox
+- name: Uninstall Firefox browser
   apt:
     pkg: firefox
     state: absent

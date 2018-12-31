@@ -1,5 +1,5 @@
 ---
 # tasks file for upgrade
-- name: Linuxmint has its specific upgrade utility, only apply security updates
+- name: Linuxmint has its specific upgrade utility, we only apply security updates
   shell: mintupdate-cli upgrade -y -r -s
   become: yes

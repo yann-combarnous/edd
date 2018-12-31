@@ -1,12 +1,12 @@
 ---
 # tasks file for desktop
-- name: Find app shortcuts settings file
+- name: Find app dock shortcuts settings file
   find:
     path: ~/.cinnamon/configs/grouped-window-list@cinnamon.org/
     patterns: ".*json$"
     use_regex: True
   register: file_grouped
-- name: Set app shortcuts
+- name: Set app dock shortcuts
   copy:
     src: grouped-window-list.json
     dest: "{{ item.path }}"
@@ -34,10 +34,10 @@
   copy:
     src: ansible.desktop
     dest: ~/.config/autostart/
-- name: Creates theme directory
-  file:
-    path: ~/.themes
-    state: directory
+#- name: Creates theme directory
+#  file:
+#    path: ~/.themes
+#    state: directory
 #- name: Unarchive theme Adapta-Nokto
 #  unarchive:
 #    src: https://cinnamon-spices.linuxmint.com/files/themes/Adapta.zip

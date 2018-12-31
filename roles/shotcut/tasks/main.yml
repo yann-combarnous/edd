@@ -1,6 +1,6 @@
 ---
 # tasks file for shotcut
-- name: Install the shotcut package from flathub for all users
+- name: Install the shotcut video editor package from flathub for all users
   flatpak:
     name: org.shotcut.Shotcut
     state: present
