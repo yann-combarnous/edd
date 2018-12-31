@@ -33,7 +33,7 @@ settings:
         name: "'Mint-Y'"
     iconTheme: 
         path: /org/cinnamon/desktop/interface/icon-theme
-        name: "'Paper'"
+        name: "'Mint-Y-Aqua'"
     cursorTheme:
         path: /org/cinnamon/desktop/interface/cursor-theme
-        name: "'Paper'"
+        name: "'DMZ-Black'"
