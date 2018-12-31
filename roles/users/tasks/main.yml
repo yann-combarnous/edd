@@ -14,3 +14,22 @@
     state: present
     password: "{{ invitePwd }}"
   become: yes
+- name: Creates autostart directory for invite user
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: invite
+    group: invite
+  become: yes
+  become_user: invite
+  with_items:
+    - /home/invite/.config
+    - /home/invite/.config/autostart/
+- name: Set ansible user startup script
+  copy:
+    src: ansible.desktop
+    dest: /home/invite/.config/autostart/
+    owner: invite
+    group: invite
+  become: yes
+  become_user: invite
