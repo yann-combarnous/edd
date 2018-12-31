@@ -27,13 +27,21 @@
     - /etc/opt/chrome/
     - /etc/opt/chrome/policies/
     - /etc/opt/chrome/policies/managed/
-- name: Set Chrome policies
+- name: Set Chrome invite policies
   copy:
-    src: edd-policy.json
+    src: invite-policy.json
     dest: /etc/opt/chrome/policies/managed/
     owner: invite
     group: invite
-    mode: 0500
+    mode: 0400
+  become: yes
+- name: Set Chrome edd policies
+  copy:
+    src: edd-policy.json
+    dest: /etc/opt/chrome/policies/managed/
+    owner: edd
+    group: edd
+    mode: 0400
   become: yes
 - name: Uninstall Firefox
   apt:

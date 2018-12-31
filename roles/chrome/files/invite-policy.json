@@ -1,11 +1,12 @@
 {
+    "IncognitoModeAvailability": 2,
     "DefaultPluginsSetting": 1,
     "PluginsAllowedForUrls": ["https://*", "http://*"],
     "ManagedBookmarks": [
         {"toplevel_name": "Sites EDD"}, 
         {"url": "google.com", "name": "Google"}, 
-        {"url": "youtube.com", "name": "Youtube"}, 
         {"url": "chrome://apps", "name": "Google Apps"}, 
+        {"url": "youtube.com", "name": "Youtube"}, 
         {"name": "Chrome links", "children": [
             {"url": "chromium.org", "name": "Chromium"}, 
             {"url": "dev.chromium.org", "name": "Chromium Developers"}
