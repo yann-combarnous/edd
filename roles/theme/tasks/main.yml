@@ -1,13 +1,18 @@
 ---
-- name: Add Paper icons Repository
-  apt_repository:
-    repo: ppa:snwh/ppa
-    state: present
-    codename: bionic
+- name: Copy background picture
+  copy:
+    src: ubuntu-wallpaper.jpg
+    dest: /usr/share/backgrounds/
   become: yes
-- name: Install Paper icons
-  apt:
-    pkg: paper-icon-theme
-    state: latest
-    update_cache: true
-  become: yes
+#- name: Add Paper icons Repository
+#  apt_repository:
+#    repo: ppa:snwh/ppa
+#    state: present
+#    codename: bionic
+#  become: yes
+#- name: Install Paper icons
+#  apt:
+#    pkg: paper-icon-theme
+#    state: latest
+#    update_cache: true
+#  become: yes
