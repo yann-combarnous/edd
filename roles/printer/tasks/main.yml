@@ -19,7 +19,7 @@
   stat: 
     path: /etc/cups/printers.conf 
     get_checksum: true
-    checksum_algorithm:md5
+    checksum_algorithm: md5
   register: remst
   become: yes
 
