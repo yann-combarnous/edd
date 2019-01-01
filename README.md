@@ -25,9 +25,6 @@ The script will prompt for "edd" user password twice to run some commands as sud
 
 Known issues:
 =============
-- Todo: Add Privacy Badger extension through ExtensionInstallForcelist policy
-- Todo: Add Chrome Remote Desktop extension through ExtensionInstallForcelist policy
-- Todo: Roles cleanup and documentation
 - Todo: Create logs for ansible-user script
 - Todo: Send ansible-user and ansible-system logs to loggly
-- Bug: Chromium bug 173640: unable to set "Allow in incognito" permission for ExtensionInstallForcelist extensions, being worked on by Google devs
+- Bug: Chromium bug 173640: unable to set "Allow in incognito" permission for ExtensionInstallForcelist extensions, being worked on by Google devs (see https://bugs.chromium.org/p/chromium/issues/detail?id=173640)
