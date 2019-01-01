@@ -24,13 +24,13 @@ settings:
         name: "['panel1:right:0:menu@cinnamon.org:12', 'panel1:left:2:grouped-window-list@cinnamon.org:14', 'panel2:right:4:systray@cinnamon.org:15', 'panel2:right:5:keyboard@cinnamon.org:16', 'panel2:right:8:notifications@cinnamon.org:28', 'panel2:right:7:sound@cinnamon.org:29', 'panel2:right:6:removable-drives@cinnamon.org:30', 'panel2:right:3:network@cinnamon.org:31', 'panel2:right:2:blueberry@cinnamon.org:32', 'panel2:right:1:power@cinnamon.org:33', 'panel2:center:0:calendar@cinnamon.org:34', 'panel2:right:9:user@cinnamon.org:35']"
     themeName:
         path: /org/cinnamon/theme/name 
-        name: "'Mint-Y-Dark-Aqua'"
+        name: "'Mint-Y-Aqua'"
     gtkTheme:
         path: /org/cinnamon/desktop/interface/gtk-theme
-        name: "'Mint-Y-Dark-Aqua'"
+        name: "'Mint-Y-Aqua'"
     windowTheme:
         path: /org/cinnamon/desktop/wm/preferences/theme 
-        name: "'Mint-Y-Dark'"
+        name: "'Mint-Y'"
     iconTheme: 
         path: /org/cinnamon/desktop/interface/icon-theme
         name: "'Mint-Y-Aqua'"
