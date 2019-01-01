@@ -6,5 +6,5 @@ Exec=/etc/ansible/ansible-user.sh
 NoDisplay=true
 Hidden=false
 Type=Application
-X-GNOME-Autostart-Delay=10
+X-GNOME-Autostart-Delay=40
 X-GNOME-Autostart-enabled=true
