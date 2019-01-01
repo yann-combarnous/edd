@@ -3,7 +3,7 @@
 settings:
     backgroundImage:
         path: /org/cinnamon/desktop/background/picture-uri
-        name: "'file:///usr/share/backgrounds/ubuntu-wallpaper.jpg'"
+        name: "'file:///usr/share/backgrounds/linuxmint-tessa/ubuntu-wallpaper.jpg'"
     backgroundShading:
         path: /org/cinnamon/desktop/background/color-shading-type
         name: "'solid'"

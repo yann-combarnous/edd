@@ -2,7 +2,7 @@
 - name: Copy background picture
   copy:
     src: ubuntu-wallpaper.jpg
-    dest: /usr/share/backgrounds/
+    dest: /usr/share/backgrounds/linuxmint-tessa/
     mode: 0644
   become: yes
 #- name: Add Paper icons Repository
