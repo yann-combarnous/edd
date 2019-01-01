@@ -3,6 +3,7 @@
   copy:
     src: ubuntu-wallpaper.jpg
     dest: /usr/share/backgrounds/
+    mode: 0644
   become: yes
 #- name: Add Paper icons Repository
 #  apt_repository:
