@@ -26,7 +26,7 @@
   service: 
     name: cups
     state: stopped
-  when: not remst.stat.exists or (md5_printerfile != remst.stat.md5)
+  when: not remst.stat.exists or (md5_printerfile != remst.stat.checksum)
   become: yes
 
 - name: "cups - configure drivers"
@@ -48,5 +48,5 @@
     group: lp
     backup: yes
   notify: restart cups
-  when: not remst.stat.exists or (md5_printerfile != remst.stat.md5)
+  when: not remst.stat.exists or (md5_printerfile != remst.stat.checksum)
   become: yes
