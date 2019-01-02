@@ -30,6 +30,14 @@
   copy:
     src: mintwelcome.desktop
     dest: ~/.config/autostart/
+- name: Disable Flatpak update
+  copy:
+    src: mintinstall-update-flatpak.desktop
+    dest: ~/.config/autostart/
+- name: Disable Mint update
+  copy:
+    src: mintupdate.desktop
+    dest: ~/.config/autostart/
 - name: Set ansible startup script
   copy:
     src: ansible.desktop
