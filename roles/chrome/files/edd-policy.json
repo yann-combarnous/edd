@@ -4,13 +4,14 @@
     "ExtensionInstallForcelist": ["gbchcmhmhahfdphkhkmpfmihenigjmpp;https://clients2.google.com/service/update2/crx",
         "pkehgijcmpdhfbdbbnkijodmdjhbjlgp;https://clients2.google.com/service/update2/crx"],
     "ManagedBookmarks": [
-        {"toplevel_name": "Sites EDD"}, 
-        {"url": "google.com", "name": "Google"}, 
-        {"url": "youtube.com", "name": "Youtube"}, 
+        {"toplevel_name": "Liens EDD"}, 
+        {"url": "http://tiny.cc/edd-direct", "name": "Liens fréquemment utilisés"}, 
         {"url": "chrome://apps", "name": "Google Apps"}, 
-        {"name": "Chrome links", "children": [
-            {"url": "chromium.org", "name": "Chromium"}, 
-            {"url": "dev.chromium.org", "name": "Chromium Developers"}
+        {"url": "https://fr.wikipedia.org", "name": "Wikipedia"}, 
+        {"url": "youtube.com", "name": "Youtube"},
+        {"name": "Sites éducation", "children": [
+            {"url": "https://www.jeux-geographiques.com", "name": "Jeux géo"}, 
+            {"url": "https://www.nedbox.be/", "name": "NedBox néerlandais"}
             ]
         }
     ]
