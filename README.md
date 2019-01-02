@@ -27,4 +27,11 @@ Known issues:
 =============
 - Todo: Create logs for ansible-user script
 - Todo: Send ansible-user and ansible-system logs to loggly
-- Bug: Chromium bug 173640: unable to set "Allow in incognito" permission for ExtensionInstallForcelist extensions, being worked on by Google devs (see https://bugs.chromium.org/p/chromium/issues/detail?id=173640)
+- Bug: Chromium bug 173640: unable to set "Allow in incognito" permission for ExtensionInstallForcelist extensions, being worked on by Google devs (see https://bugs.chromium.org/p/chromium/issues/detail?id=173640). As a workaround, on invite account, use: 
+```
+chmod 000 /etc/opt/chrome/policies/managed/invite-policy.json
+```
+Then open chrome and got to chrome://extensions, open details for Privacy Badger extension, and activate in incognito mode. Then run:
+```
+chmod 400 /etc/opt/chrome/policies/managed/invite-policy.json
+```
