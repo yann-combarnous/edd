@@ -1,13 +1,16 @@
 {
     "IncognitoModeAvailability": 2,
     "DefaultPluginsSetting": 1,
+    "ForceYouTubeRestrict": 1,
+    "ForceGoogleSafeSearch": true,
     "PluginsAllowedForUrls": ["https://*", "http://*"],
     "ExtensionInstallForcelist": ["gbchcmhmhahfdphkhkmpfmihenigjmpp;https://clients2.google.com/service/update2/crx",
         "pkehgijcmpdhfbdbbnkijodmdjhbjlgp;https://clients2.google.com/service/update2/crx"],
     "ManagedBookmarks": [
         {"toplevel_name": "Liens EDD"}, 
         {"url": "http://tiny.cc/edd-direct", "name": "Liens fréquemment utilisés"}, 
-        {"url": "chrome://apps", "name": "Google Apps"}, 
+        {"url": "https://drive.google.com", "name": "Google Drive"}, 
+        {"url": "https://mail.google.com", "name": "Gmail"}, 
         {"url": "https://fr.wikipedia.org", "name": "Wikipedia"}, 
         {"url": "youtube.com", "name": "Youtube"},
         {"name": "Sites éducation", "children": [
