@@ -1,6 +1,5 @@
 ---
 # tasks file for printer
----
 - name: "cups - installation"
   apt: 
     name: cups 
