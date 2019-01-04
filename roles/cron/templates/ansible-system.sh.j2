@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
 
-# Random pause up to half an hour (avoid all machines running at the same time)
-sleep $(( RANDOM % 1800 ))
-
 # Run system playbook
 ansible-pull -U {{ repo_url }} update-system.yml --clean --purge --full -C master -d {{ workdir }}

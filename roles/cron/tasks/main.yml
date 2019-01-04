@@ -24,10 +24,14 @@
     group: root 
     mode: 0751
   become: yes
+- name: Clean former cron entry
+  file:
+    state: absent
+    path: /etc/cron.d/ansible-pull
 - name: Create crontab entry to clone/pull git repository
   template: 
     src: etc_cron.d_ansible-pull.j2
-    dest: /etc/cron.d/ansible-pull
+    dest: /etc/cron.daily/ansible-pull
     owner: root
     group: root
     mode: 0644
