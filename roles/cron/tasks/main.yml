@@ -35,7 +35,7 @@
     dest: /etc/cron.daily/ansible-pull
     owner: root
     group: root
-    mode: 0644
+    mode: 0744
   become: yes
 - name: Create logrotate entry for ansible-pull.log
   template: 
