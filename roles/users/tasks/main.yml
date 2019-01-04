@@ -31,3 +31,8 @@
     owner: invite
     group: invite
   become: yes
+- name: Set autologin user
+  copy:
+    src: lightdm.conf
+    dest: /etc/lightdm/
+  become: yes
