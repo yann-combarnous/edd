@@ -1,4 +1,5 @@
-ansible-pull -U https://github.com/xunilog/edd.git update-system.yml --clean --purge --full -C master -
+ansible-pull -U https://github.com/xunilog/edd.git update-system.yml --clean --purge --full -C master -K
+
 Role Name
 =========
 
