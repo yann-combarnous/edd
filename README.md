@@ -23,6 +23,15 @@ curl https://raw.githubusercontent.com/xunilog/edd/master/provision.sh | bash
 
 The script will prompt for "edd" user password twice to run some commands as sudo. 
 
+Then subscribe the machine to Loggly so ansible run results get published online:
+
+```
+curl -O https://www.loggly.com/install/configure-file-monitoring.sh
+sudo bash configure-file-monitoring.sh -a eddbxl -t 9f567eb4-7e5c-4eb5-af44-a91ca9853dae -u edd -f /var/log/ansible-pull.log -l ansible-pull
+```
+
+The user password prompted should be the same as "edd" user.
+
 Known issues:
 =============
 - Todo: Create logs for ansible-user script
