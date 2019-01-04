@@ -27,6 +27,14 @@
     - /etc/opt/chrome/
     - /etc/opt/chrome/policies/
     - /etc/opt/chrome/policies/managed/
+- name: Set Chrome common user policies
+  copy:
+    src: common.json
+    dest: /etc/opt/chrome/policies/managed/
+    owner: root
+    group: root
+    mode: 0644
+  become: yes
 - name: Set Chrome invite user policies
   copy:
     src: invite-policy.json
