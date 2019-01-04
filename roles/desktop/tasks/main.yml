@@ -42,15 +42,19 @@
   copy:
     src: ansible.desktop
     dest: ~/.config/autostart/
-#- name: Creates theme directory
-#  file:
-#    path: ~/.themes
-#    state: directory
-#- name: Unarchive theme Adapta-Nokto
-#  unarchive:
-#    src: https://cinnamon-spices.linuxmint.com/files/themes/Adapta.zip
-#    dest: ~/.themes
-#    remote_src: yes
+- name: Creates applications directory
+  file:
+    path: "{ item }}"
+    state: directory
+  with_items:
+    - ~/.local/
+    - ~/.local/share/
+    - ~/.local/share/applications/
+- name: Copy new chrome shortcut, disabling password manager
+  copy:
+    src: google-chrome.desktop
+    dest: ~/.local/share/applications/
+  when: ansible_user_id == "invite"
 - name: Configure Desktop
   dconf:
     key: "{{ item.value.path }}"
