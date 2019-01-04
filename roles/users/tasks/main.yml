@@ -1,13 +1,5 @@
 ---
 # tasks file for users
-- name: Protect admin user folder
-  file:
-    path: /home/edd
-    owner: edd
-    group: edd
-    mode: '700'
-    recurse: yes
-  become: yes
 - name: Add the invite user
   user:
     name: invite
@@ -36,3 +28,12 @@
     src: lightdm.conf
     dest: /etc/lightdm/
   become: yes
+- name: Protect admin user folder
+  file:
+    path: /home/edd
+    owner: edd
+    group: edd
+    mode: '700'
+    recurse: yes
+  become: yes
+  
