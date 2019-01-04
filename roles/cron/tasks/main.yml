@@ -28,6 +28,7 @@
   file:
     state: absent
     path: /etc/cron.d/ansible-pull
+  become: yes
 - name: Create crontab entry to clone/pull git repository
   template: 
     src: etc_cron.d_ansible-pull.j2
