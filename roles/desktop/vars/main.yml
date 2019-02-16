@@ -37,3 +37,9 @@ settings:
     cursorTheme:
         path: /org/cinnamon/desktop/interface/cursor-theme
         name: "'DMZ-Black'"
+    lockScreen:
+        path: /org/cinnamon/desktop/screensaver/lock-enabled
+        name: "false"
+    powerLock:
+        path: /org/cinnamon/settings-daemon/plugins/power/lock-on-suspend
+        name: "false"
