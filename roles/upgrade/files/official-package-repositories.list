@@ -1,0 +1,8 @@
+deb http://ftp.nluug.nl/os/Linux/distr/linuxmint/packages tessa main upstream import backport 
+
+deb http://ubuntu.mirrors.ovh.net/ubuntu bionic main restricted universe multiverse
+deb http://ubuntu.mirrors.ovh.net/ubuntu bionic-updates main restricted universe multiverse
+deb http://ubuntu.mirrors.ovh.net/ubuntu bionic-backports main restricted universe multiverse
+
+deb http://security.ubuntu.com/ubuntu/ bionic-security main restricted universe multiverse
+deb http://archive.canonical.com/ubuntu/ bionic partner
